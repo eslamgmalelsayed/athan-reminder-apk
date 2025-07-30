@@ -70,9 +70,7 @@ export default function App() {
           style={[styles.refreshButton, isLoading && styles.disabledButton]}
           disabled={isLoading}
         >
-          <Text style={styles.buttonText}>
-            🔄 Demo Mode - Prayer Times
-          </Text>
+          <Text style={styles.buttonText}>🔄 Demo Mode - Prayer Times</Text>
         </TouchableOpacity>
 
         <View style={styles.footer}>
