@@ -2,22 +2,53 @@
   "expo": {
     "name": "Athan Reminder",
     "slug": "athan-reminder",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "backgroundColor": "#22C55E",
     "primaryColor": "#22C55E",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#22C55E"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "platforms": ["ios", "android", "web"],
     "extra": {
       "eas": {
         "projectId": "493f5dfc-4326-49cf-86f0-ebc70addd186"
       }
     },
     "android": {
-      "package": "com.eslamgamalelsayed.athanreminder"
-    }
+      "package": "com.eslamgamalelsayed.athanreminder",
+      "versionCode": 2,
+      "icon": "./assets/icon.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#22C55E"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "This app needs access to location to calculate accurate prayer times for your current location."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#22C55E"
+        }
+      ]
+    ]
   }
 }
